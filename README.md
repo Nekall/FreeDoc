@@ -1,10 +1,18 @@
 FreeDoc - Réserve ton docteur
-2.1.1. Le pitch
 
-Allez, on va implémenter pour de vrai ce concurrent de Doctolib dont on te parle à longueur de ressource ! À toi d'être chirurgical 👩‍⚕️
-2.1.2. Les models
+App d'entrainement avec les BDD, le but est de faire une app qui met en relation des docteurs et des patients. 
+J'ai créé un model Doctor, un model Patient et un model Appointment, ces trois là sont mis en relation de façon 
+à ce que un appointment ne peut avoir qu'un seul doctor, mais un doctor peut avoir plusieurs appointment, un 
+appointment ne peut avoir qu'un seul patient, mais un patient peut avoir plusieurs appointment et un doctor peut 
+avoir plusieurs patient, au travers des appointments, et vice versa.
 
-Pour ce premier exercice, nous allons t'aider et te donner les models à créer :
+
+J'ai créé un seeds.rb qui crée 8 docteurs, 35 patients et génère 50 rendez-vous. 
+
+J'ai ajouté un model City qui fait en sorte que chaque docteur, patient, et rendez-vous est lié à une city. 
+Une city peut avoir plusieurs docteurs, patients, et rendez-vous.
+
+______________________________________________________________________________________________________________________________
 
     un model Doctor, qui a comme attributs :
         un first_name, qui est un string
